@@ -5,20 +5,14 @@ public class VacationService {
         int count = 0; // счетчик месяцев отдыха
         int money = 0; // количество денег на счету
 
-        for (int month = 0; month <= 12; month++) {
-            if (money <= threshold) {
-                money += income;
-                money -= expenses;
-
-                if (money >= threshold) {
-                    count++;
-                    money -= expenses;
-                    money -= income * 3;
-                }
-            } else {
+        for (int month = 0; month < 12; month++) {
+            if (money >= threshold) {
                 count++;
                 money -= expenses;
-                money -= income * 3;
+                money /= 3;
+            } else {
+                money += income;
+                money -= expenses;
             }
 
         }
