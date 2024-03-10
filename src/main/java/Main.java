@@ -5,20 +5,12 @@ public class Main {
 
         VacationService vacationService = new VacationService();
 
-        // Пример 1
-        int income1 = 13_000;
-        int expenses1 = 3_000;
-        int threshold1 = 10_000;
+        // Example 1
+        int result1 = vacationService.calculateVacationMonths(10_000, 3_000, 20_000);
+        System.out.println("Ответ для первого примера: " + result1);
 
-        int result1 = vacationService.calculateVacationMonths(income1, expenses1, threshold1);
-        System.out.println("Отдых в следующем году (Пример 1): " + result1 + " месяц(ев)");
-
-        // Пример 2
-        int income2 = 111_111;
-        int expenses2 = 60_000;
-        int threshold2 = 100_000;
-
-        int result2 = vacationService.calculateVacationMonths(income2, expenses2, threshold2);
-        System.out.println("Отдых в следующем году (Пример 2): " + result2 + " месяц(ев)");
+        // Example 2
+        int result2 = vacationService.calculateVacationMonths(10_0000, 60_000, 150_000);
+        System.out.println("Ответ для второго примера: " + result2);
     }
 }
